@@ -1,0 +1,67 @@
+name: Check Upstream Releases
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  check:
+    name: Check upstream releases
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Check releases
+        run: |
+          python -B tools/check_upstream_releases.py \
+            --json-output sources/upstream-release-status.json \
+            --no-fail-on-update
+
+      - name: Detect updates
+        id: detect
+        shell: python
+        run: |
+          import json
+          import os
+          from pathlib import Path
+
+          data = json.loads(Path("sources/upstream-release-status.json").read_text(encoding="utf-8"))
+          updates = [row for row in data["upstreams"] if row["updateAvailable"]]
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              print(f"has_updates={str(bool(updates)).lower()}", file=output)
+              print("updated_names=" + ", ".join(row["name"] for row in updates), file=output)
+
+      - name: Remove status file when current
+        if: steps.detect.outputs.has_updates != 'true'
+        run: rm -f sources/upstream-release-status.json
+
+      - name: Create upstream notification PR
+        if: steps.detect.outputs.has_updates == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: automation/upstream-release-update
+          delete-branch: true
+          commit-message: Notice upstream font release update
+          title: Upstream font release update available
+          body: |
+            An upstream font release appears to be newer than `sources/upstream-lock.json`.
+
+            Updated upstreams: ${{ steps.detect.outputs.updated_names }}
+
+            This PR only updates `sources/upstream-release-status.json` as a notification.
+            Review the upstream changes, then run the manual build workflow when ready.
+          add-paths: |
+            sources/upstream-release-status.json

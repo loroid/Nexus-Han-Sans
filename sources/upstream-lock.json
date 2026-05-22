@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "syncedAt": "2026-05-19T02:19:48+00:00",
+  "files": [
+    {
+      "component": "Source Han Sans JP",
+      "source": "../dream-han-cjk/source/source-han-sans/SourceHanSans-VF.ttf",
+      "target": "sources/source-han-sans/SourceHanSans-VF.ttf",
+      "size": 36064964,
+      "sha256": "23b20a0139e03981496b6e66bcb14263a517fd94624918289b8b988789a34a01",
+      "font": {
+        "family": "Source Han Sans VF",
+        "subfamily": "Regular",
+        "fullName": "Source Han Sans VF",
+        "version": "Version 2.005;addfeatures 5.0.0b21",
+        "unitsPerEm": 1000,
+        "fontRevision": 2.0050048828125,
+        "axes": [
+          {
+            "tag": "wght",
+            "min": 250.0,
+            "default": 250.0,
+            "max": 900.0
+          }
+        ],
+        "hasAvar": true
+      }
+    },
+    {
+      "component": "Source Han Sans SC",
+      "source": "../dream-han-cjk/source/source-han-sans/SourceHanSansSC-VF.ttf",
+      "target": "sources/source-han-sans/SourceHanSansSC-VF.ttf",
+      "size": 36035552,
+      "sha256": "68f866374d8ff04d2103c5b2907f1cab2dbec91ac0fb6ad0b801c6db0c1faa80",
+      "font": {
+        "family": "Source Han Sans SC VF",
+        "subfamily": "Regular",
+        "fullName": "Source Han Sans SC VF",
+        "version": "Version 2.005;addfeatures 5.0.0b21",
+        "unitsPerEm": 1000,
+        "fontRevision": 2.0050048828125,
+        "axes": [
+          {
+            "tag": "wght",
+            "min": 250.0,
+            "default": 250.0,
+            "max": 900.0
+          }
+        ],
+        "hasAvar": true
+      }
+    },
+    {
+      "component": "Source Han Sans TC",
+      "source": "../dream-han-cjk/source/source-han-sans/SourceHanSansTC-VF.ttf",
+      "target": "sources/source-han-sans/SourceHanSansTC-VF.ttf",
+      "size": 36034016,
+      "sha256": "1a273a56aa47250c7af95e461ee0c8236c60d7141e14a37bd18baccb1e851b19",
+      "font": {
+        "family": "Source Han Sans TC VF",
+        "subfamily": "Regular",
+        "fullName": "Source Han Sans TC VF",
+        "version": "Version 2.005;addfeatures 5.0.0b21",
+        "unitsPerEm": 1000,
+        "fontRevision": 2.0050048828125,
+        "axes": [
+          {
+            "tag": "wght",
+            "min": 250.0,
+            "default": 250.0,
+            "max": 900.0
+          }
+        ],
+        "hasAvar": true
+      }
+    },
+    {
+      "component": "Source Han Sans HC",
+      "source": "../dream-han-cjk/source/source-han-sans/SourceHanSansHC-VF.ttf",
+      "target": "sources/source-han-sans/SourceHanSansHC-VF.ttf",
+      "size": 36025256,
+      "sha256": "68ce34a86e79f91e6f0cfae69be7e1c78d68a056ae39c52124c75bfafe56227f",
+      "font": {
+        "family": "Source Han Sans HC VF",
+        "subfamily": "Regular",
+        "fullName": "Source Han Sans HC VF",
+        "version": "Version 2.005;addfeatures 5.0.0b21",
+        "unitsPerEm": 1000,
+        "fontRevision": 2.0050048828125,
+        "axes": [
+          {
+            "tag": "wght",
+            "min": 250.0,
+            "default": 250.0,
+            "max": 900.0
+          }
+        ],
+        "hasAvar": true
+      }
+    },
+    {
+      "component": "Source Han Sans KR",
+      "source": "../dream-han-cjk/source/source-han-sans/SourceHanSansK-VF.ttf",
+      "target": "sources/source-han-sans/SourceHanSansK-VF.ttf",
+      "size": 36031184,
+      "sha256": "607193e1a8b0b87deaca8a6ae131398c1aabd552b936a440d51d4d343b3b817f",
+      "font": {
+        "family": "Source Han Sans K VF",
+        "subfamily": "Regular",
+        "fullName": "Source Han Sans K VF",
+        "version": "Version 2.005;addfeatures 5.0.0b21",
+        "unitsPerEm": 1000,
+        "fontRevision": 2.0050048828125,
+        "axes": [
+          {
+            "tag": "wght",
+            "min": 250.0,
+            "default": 250.0,
+            "max": 900.0
+          }
+        ],
+        "hasAvar": true
+      }
+    },
+    {
+      "component": "Pretendard Std",
+      "source": "../pretendard/packages/pretendard-std/dist/public/variable/PretendardStdVariable.ttf",
+      "target": "sources/pretendard-std/PretendardStdVariable.ttf",
+      "size": 881216,
+      "sha256": "499ff7e76f905bd909b4640fe333022fb0f241e292b84e1b6986c7b46eb57a80",
+      "font": {
+        "family": "Pretendard Std Variable",
+        "subfamily": "Regular",
+        "fullName": "Pretendard Std Variable",
+        "version": "Version 1.309;Glyphs 3.2 (3225)",
+        "unitsPerEm": 2048,
+        "fontRevision": 1.308990478515625,
+        "axes": [
+          {
+            "tag": "wght",
+            "min": 45.0,
+            "default": 400.0,
+            "max": 930.0
+          }
+        ],
+        "hasAvar": false
+      }
+    }
+  ]
+}

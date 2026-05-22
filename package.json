@@ -1,0 +1,18 @@
+{
+  "name": "nexus-han-sans",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build_otb.mjs",
+    "build:ttc": "node tools/build_ttc_otb.mjs",
+    "check:node": "node tools/check_otb_env.mjs"
+  },
+  "dependencies": {
+    "ot-builder": "^1.7.4",
+    "otb-ttc-bundle": "^1.7.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
